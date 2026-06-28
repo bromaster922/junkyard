@@ -1,0 +1,7 @@
+<!DOCTYPE codename-engine-stage>
+<stage folder="/junkStage/" name="beachSketch" zoom="0.6">
+	<sprite x="-2032.97173604876" sprite="concept" y="-765.182451613833" type="none" scale="1.5" name="concept"/>
+	<girlfriend/>
+	<dad/>
+	<boyfriend/>
+</stage>

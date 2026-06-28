@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character y="250" sprite="conut_fedd" icon="conut">
+	<anim name="idle" anim="idle"/>
+	<anim name="singDOWN" anim="down" x="80" y="-72"/>
+	<anim name="singRIGHT" anim="right" x="-95" y="132"/>
+	<anim name="singLEFT" anim="left" x="125" y="54"/>
+	<anim name="singUP" anim="up" x="162" y="66"/>
+</character>

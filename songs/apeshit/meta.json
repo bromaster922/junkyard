@@ -1,0 +1,16 @@
+{
+	"videoStartType": "song_start",
+	"color": "#9271FD",
+	"opponentModeAllowed": false,
+	"difficulties": [
+		"HARD"
+	],
+	"icon": "face",
+	"coopAllowed": false,
+	"video": "Ape",
+	"stepsPerBeat": 4,
+	"displayName": "APES#!T",
+	"needsVoices": true,
+	"beatsPerMeasure": 4,
+	"bpm": 135
+}

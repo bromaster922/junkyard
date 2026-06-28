@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-character>
+<character x="50" y="200" sprite="junky_bf" flipX="true" camx="-100" camy="70" isPlayer="true">
+	<anim name="idle" anim="idle"/>
+	<anim name="singDOWN" anim="down" x="-7" y="-20"/>
+	<anim name="singRIGHT" anim="right" x="-51" y="-12"/>
+	<anim name="singLEFT" anim="left" x="10" y="-17"/>
+	<anim name="singUP" anim="up" x="-51" y="2"/>
+	<anim name="singUPmiss" anim="miss up" x="-62" y="-14"/>
+	<anim name="singDOWNmiss" anim="miss down"/>
+	<anim name="singLEFTmiss" anim="miss left" x="32" y="7"/>
+	<anim name="singRIGHTmiss" anim="miss right" x="-41" y="-10"/>
+</character>
