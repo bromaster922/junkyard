@@ -1,14 +1,15 @@
 <!DOCTYPE codename-engine-stage>
 <stage folder="/junkStage/" name="beach" zoom="0.5">
 	<sprite x="-1450" scroll="0.1" sprite="sky" y="-852" type="none" scale="2.21" name="sky"/>
-	<sprite x="-2144" scroll="0.3" sprite="sun" y="-886" type="none" scale="1.5" name="sun"/>
-	<sprite x="-1800" scroll="0.45" sprite="water" y="-830" scale="1.5" name="water"/>
+	<sprite x="-744" scroll="0.3" sprite="sun" y="-186" type="none" scale="3" name="sun"/>
+	<sprite x="-1800" scroll="0.4" sprite="water" y="-830" scale="2" name="water"/>
 	<sprite x="-2000" scroll="0.6" sprite="volcano" y="-500" type="none" scale="1.5" name="volcano"/>
 	<sprite x="-2197" scroll="0.65" sprite="sand1" y="-606" type="none" scalex="1.7" scaley="1.5" name="sand1"/>
+	<sprite x="-2197" scroll="0.65" sprite="treesFar" y="-606" type="none" scalex="1.7" scaley="1.5" name="treeFar"/>
 	<sprite x="-2126" sprite="sand2" y="-851" type="none" scalex="1.6" scaley="1.5" name="sand2"/>
 	<sprite x="-2145.25630426682" sprite="treeBG" y="-872.114696407633" type="none" scale="1.5" name="treeBG"/>
 	<girlfriend/>
-	<dad/>
-	<boyfriend/>
+	<dad y="300"/>
+	<boyfriend y="300"/>
 	<sprite x="-1747.05728129316" y="-737.05923874731" type="none" name="treeFG" sprite="treeFG" scroll="1.3" scalex="1.5" skewx="0.00429609698728882" scaley="1.50006567488615"/>
 </stage>
