@@ -13,6 +13,11 @@ function postCreate() {
 	insert(0, hb);
 	hb.scale.set(1.5,1.5);
 	hb.antialiasing = false;
+	camHUD.alpha = 0;
+}
+
+function onSongStart() {
+	FlxTween.tween(camHUD, {alpha: 1}, 2, {ease:FlxEase.quartInOut});
 }
 
 function postUpdate() {

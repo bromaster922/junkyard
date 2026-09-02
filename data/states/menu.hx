@@ -1,5 +1,8 @@
 import funkin.menus.ModSwitchMenu;
-var camMenu:FlxSprite;
+import funkin.editors.EditorPicker;
+import funkin.backend.MusicBeatState;
+
+var camMenu:FlxCamera;
 var play; var opt; var cred; var stuff;
 var curSelected = 0;
 
@@ -52,6 +55,20 @@ function postCreate() {
 	add(stuff);
 
 	trace(curSelected);
+
+	var sky = new FlxSprite().loadGraphic(Paths.image("menu/fakeTrans"));
+	sky.screenCenter();
+	sky.y = -75;
+	sky.camera = camMenu;
+	sky.scrollFactor.set(0.1,0.1);
+	insert(0,sky);
+	var sun = new FlxSprite().loadGraphic(Paths.image("menu/fakeTransSun"));
+	sun.screenCenter();
+	sun.y += 10;
+	sun.y = -215;
+	sun.camera = camMenu;
+	sun.scrollFactor.set(0.3,0.3);
+	insert(1,sun);
 }
 
 function update(e) {
@@ -97,11 +114,20 @@ function update(e) {
 	if (controls.ACCEPT) {
 		switch(curSelected) {
 			case 0:
-				PlayState.loadSong("apeshit", "HARD", false, false);
-				FlxG.switchState(new PlayState());
+				FlxTween.tween(camMenu.scroll, {y:camMenu.scroll - 720}, 2, {ease:FlxEase.quartInOut});
+				new FlxTimer().start(2, function(t) {
+					MusicBeatState.skipTransOut = MusicBeatState.skipTransIn = true;
+					PlayState.loadSong("apeshit", "HARD", false, false);
+					FlxG.switchState(new PlayState());
+				});
 			case 1:
 			case 2:
 			case 3:
 		}
+	}
+
+	if (FlxG.keys.justPressed.SEVEN){
+		persistentUpdate = !(persistentDraw = true);
+		openSubState(new EditorPicker());
 	}
 }

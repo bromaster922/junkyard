@@ -51,6 +51,7 @@ function postCreate() {
 		i.animation.addByPrefix("up", "up", 24, false);
 		i.animation.addByPrefix("right", "right", 24, false);
 		i.animation.play("idle");
+		i.x -= 120;
 	}
 }
 
@@ -90,13 +91,13 @@ function barIn(num) {
 	switch(num) { 
 		case 1:
 			FlxTween.tween(bg1, {y:0}, 0.5, {ease:FlxEase.quartOut});
-			FlxTween.tween(nut1, {y:89}, 0.5, {ease:FlxEase.quartOut});
+			FlxTween.tween(nut1, {y:120}, 0.5, {ease:FlxEase.quartOut});
 		case 2:
 			FlxTween.tween(bg2, {y:0}, 0.5, {ease:FlxEase.quartOut});
-			FlxTween.tween(nut2, {y:89}, 0.5, {ease:FlxEase.quartOut});
+			FlxTween.tween(nut2, {y:120}, 0.5, {ease:FlxEase.quartOut});
 		case 3:
 			FlxTween.tween(bg3, {y:0}, 0.5, {ease:FlxEase.quartOut});
-			FlxTween.tween(nut3, {y:89}, 0.5, {ease:FlxEase.quartOut});
+			FlxTween.tween(nut3, {y:120}, 0.5, {ease:FlxEase.quartOut});
 	}
 }
 function barOut(num) {
