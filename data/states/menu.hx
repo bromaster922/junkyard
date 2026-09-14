@@ -117,7 +117,7 @@ function update(e) {
 				FlxTween.tween(camMenu.scroll, {y:camMenu.scroll - 720}, 2, {ease:FlxEase.quartInOut});
 				new FlxTimer().start(2, function(t) {
 					MusicBeatState.skipTransOut = MusicBeatState.skipTransIn = true;
-					PlayState.loadSong("apeshit", "HARD", false, false);
+					PlayState.loadSong("nucifera", "normal", false, false);
 					FlxG.switchState(new PlayState());
 				});
 			case 1:
