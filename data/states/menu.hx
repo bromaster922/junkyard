@@ -1,23 +1,25 @@
 import funkin.menus.ModSwitchMenu;
 import funkin.editors.EditorPicker;
 import funkin.backend.MusicBeatState;
+import funkin.options.OptionsMenu;
 
 var camMenu:FlxCamera;
 var play; var opt; var cred; var stuff;
 var curSelected = 0;
+var blur = new CustomShader("blur");
 
 function postCreate() {
 	CoolUtil.playMenuSong();
 
 	camMenu = new FlxCamera();
 	FlxG.cameras.add(camMenu,false);
-	var bg = new FlxSprite().loadGraphic(Paths.image("menu/sand"));
+	var bg = new FlxSprite().loadGraphic(Paths.image("menus/sand"));
 	bg.camera = camMenu;
 	add(bg);
 	bg.scale.set(1280/bg.width, 720/bg.height);
 	bg.updateHitbox();
 	bg.screenCenter();
-	var cock = new FlxSprite().loadGraphic(Paths.image("menu/fred"));
+	var cock = new FlxSprite().loadGraphic(Paths.image("menus/fred"));
 	cock.camera = camMenu;
 	add(cock);
 	cock.scale.set(1280/cock.width, 720/cock.height);
@@ -52,23 +54,26 @@ function postCreate() {
 	stuff.setFormat(Paths.font("vcr.ttf"), 64, FlxColor.WHITE);
 	stuff.color = FlxColor.BLACK;
 	stuff.camera = camMenu;
-	add(stuff);
+	//add(stuff);
 
 	trace(curSelected);
 
-	var sky = new FlxSprite().loadGraphic(Paths.image("menu/fakeTrans"));
+	var sky = new FlxSprite().loadGraphic(Paths.image("menus/fakeTrans"));
 	sky.screenCenter();
 	sky.y = -75;
 	sky.camera = camMenu;
 	sky.scrollFactor.set(0.1,0.1);
 	insert(0,sky);
-	var sun = new FlxSprite().loadGraphic(Paths.image("menu/fakeTransSun"));
+	var sun = new FlxSprite().loadGraphic(Paths.image("menus/fakeTransSun"));
 	sun.screenCenter();
-	sun.y += 10;
-	sun.y = -215;
+	sun.x += 55;
+	sun.y = -140;
 	sun.camera = camMenu;
 	sun.scrollFactor.set(0.3,0.3);
 	insert(1,sun);
+	if (Options.gameplayShaders) {
+		sky.shader = sun.shader = blur;
+	}
 }
 
 function update(e) {
@@ -79,8 +84,8 @@ function update(e) {
 	if (downP) { curSelected++; FlxG.sound.play(Paths.sound("scroll"));}
 	curSelected -= scroll;
 	if (scroll != 0) FlxG.sound.play(Paths.sound("scroll"));
-	if (curSelected >= 4) curSelected = 0;
-	if (curSelected <= -1) curSelected = 3;
+	if (curSelected >= 3) curSelected = 0;
+	if (curSelected <= -1) curSelected = 2;
 	switch(curSelected) {
 		case 0:
 			play.color = FlxColor.RED;
@@ -102,7 +107,6 @@ function update(e) {
 			opt.color = FlxColor.BLACK;
 			cred.color = FlxColor.BLACK;
 			stuff.color = FlxColor.RED;
-		
 	}
 
 	if (controls.SWITCHMOD) {
@@ -120,9 +124,11 @@ function update(e) {
 					PlayState.loadSong("nucifera", "normal", false, false);
 					FlxG.switchState(new PlayState());
 				});
-			case 1:
-			case 2:
-			case 3:
+			case 1: FlxG.switchState(new OptionsMenu()); optionMenuReturn = true;
+			case 2: 
+				PlayState.loadSong("credits", "hard", false, false);
+				FlxG.switchState(new PlayState());
+			case 3: //nothing yet
 		}
 	}
 

@@ -15,6 +15,7 @@ function postCreate() {
 	hb.antialiasing = false;
 	camHUD.alpha = 0;
 	doIconBop = false;
+	if (!camHUD.downscroll) hb.y += 25;
 }
 
 function onSongStart() {

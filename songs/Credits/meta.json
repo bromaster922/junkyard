@@ -2,13 +2,13 @@
 	"opponentModeAllowed": false,
 	"icon": "face",
 	"difficulties": [
-		"normal"
+		"hard"
 	],
-	"color": "#000000",
+	"color": "#FFFFFF",
 	"coopAllowed": false,
 	"stepsPerBeat": 4,
-	"displayName": "nucifera",
-	"beatsPerMeasure": 4,
+	"displayName": "Credits",
 	"needsVoices": true,
-	"bpm": 170
+	"beatsPerMeasure": 4,
+	"bpm": 120
 }

@@ -1,0 +1,190 @@
+{
+	"events": [
+		{
+			"params": [
+				200,
+				-100,
+				false,
+				4,
+				"CLASSIC",
+				"In",
+				false
+			],
+			"time": 0,
+			"name": "Camera Position"
+		},
+		{
+			"params": [
+				false,
+				1.8,
+				"camGame",
+				4,
+				"linear",
+				"In",
+				"direct",
+				false
+			],
+			"time": 0,
+			"name": "Camera Zoom"
+		},
+		{
+			"params": [
+				150,
+				400,
+				true,
+				127,
+				"smootherStep",
+				"InOut",
+				false
+			],
+			"time": 125,
+			"name": "Camera Position"
+		},
+		{
+			"params": [
+				true,
+				1.05,
+				"camGame",
+				127,
+				"smootherStep",
+				"InOut",
+				"direct",
+				false
+			],
+			"time": 125,
+			"name": "Camera Zoom"
+		},
+		{
+			"params": [
+				"switchTxt",
+				"CEBULARZ, All of the art and og comic"
+			],
+			"time": 16000,
+			"name": "HScript Call"
+		},
+		{
+			"params": [
+				"switchTxt",
+				"GRILL, Concept Artist"
+			],
+			"time": 24000,
+			"name": "HScript Call"
+		},
+		{
+			"params": [
+				"switchTxt",
+				"CINDER, Conut song"
+			],
+			"name": "HScript Call",
+			"time": 32000
+		},
+		{
+			"params": [
+				"switchTxt",
+				"SEEKO, Menu Music"
+			],
+			"time": 40000,
+			"name": "HScript Call"
+		},
+		{
+			"params": [
+				"switchTxt",
+				"EMERALDISHERE, Game Over and Chromatics"
+			],
+			"name": "HScript Call",
+			"time": 48000
+		},
+		{
+			"params": [
+				"switchTxt",
+				"BROMASTER819, Code and Credits song"
+			],
+			"time": 56000,
+			"name": "HScript Call"
+		},
+		{
+			"params": [
+				"switchTxt",
+				"QBIX, Chart"
+			],
+			"name": "HScript Call",
+			"time": 64000
+		},
+		{
+			"params": [
+				"switchTxt",
+				"SPRINGBOI, Emotional Support"
+			],
+			"time": 72000,
+			"name": "HScript Call"
+		},
+		{
+			"params": [
+				"switchTxt",
+				"POPPYPETALS, Emotional Support"
+			],
+			"name": "HScript Call",
+			"time": 76000
+		},
+		{
+			"params": [
+				"switchTxt",
+				"off, off"
+			],
+			"name": "HScript Call",
+			"time": 79953.125
+		},
+		{
+			"params": [
+				200,
+				-100,
+				true,
+				196,
+				"smoothStep",
+				"InOut",
+				false
+			],
+			"name": "Camera Position",
+			"time": 80000
+		},
+		{
+			"params": [
+				true,
+				1.8,
+				"camGame",
+				196,
+				"sine",
+				"InOut",
+				"direct",
+				false
+			],
+			"name": "Camera Zoom",
+			"time": 80000
+		}
+	],
+	"codenameChart": true,
+	"strumLines": [
+		{
+			"keyCount": 4,
+			"strumScale": 1,
+			"position": "dad",
+			"notes": [],
+			"characters": [
+				"boy"
+			],
+			"type": 0,
+			"visible": false,
+			"strumSpacing": 1,
+			"strumPos": [
+				0,
+				50
+			],
+			"strumLinePos": 0.25,
+			"vocalsSuffix": ""
+		}
+	],
+	"scrollSpeed": 2,
+	"chartVersion": "1.6.0",
+	"stage": "burp",
+	"noteTypes": []
+}
